@@ -46,6 +46,13 @@ footer{
     padding: 6.5px;
     background-color: #A64B00;
 }
+#see{
+    color: #FF7400;
+    text-decoration: none;
+    margin-left: 5px;
+    font-size: 1.8em;
+    font-family: "Times New Roman", Times, serif;
+}
 
 a{
     color: #FF7400;
@@ -63,4 +70,16 @@ caption{
     color: #A64B00;
     font-size: 30px;
     font-family: "Times New Roman", Times, serif;
+}
+
+article{
+    margin: 10px 15px 10px 15px;
+    width: 60%;
+    border: 1px solid #A64B00;
+    display: inline-block;
+}
+#descr{
+    height: 250px;
+    width: 250px;
+    float: left;
 }

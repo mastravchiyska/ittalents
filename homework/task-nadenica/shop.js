@@ -61,14 +61,15 @@ Product.prototype.showAsHTML = function () {
 }
 Shop.prototype.showDetails = function (id) {
     for (var index = 0; index < this.allProducts.length; index++) {
-        if(id === this.allProducts[index].id){      
-            console.log(this.allProducts[index]);      
-            document.write('<article>'+
-                        '<img id="descr" src="'+this.allProducts[index].img+'" alt="">'+
-                        '<h2>'+this.allProducts[index].name+'</h2>'+
-                        '<h2>'+this.allProducts[index].city+'</h2>'+
-                        '<p>Описание:<br>'+this.allProducts[index].description+'</p></article>');
-                    }
+        if (id === this.allProducts[index].id) {
+            document.write('<article>' +
+                '<img id="descr" src="' + this.allProducts[index].img + '" alt="">' +
+                '<h2>' + this.allProducts[index].name + '</h2>' +
+                '<h3>' + this.allProducts[index].city + '</h3>' +
+                '<p>Описание:<br>' + this.allProducts[index].description + '</p></article>');
+            break;
+        }
+
     }
 }
 
@@ -88,8 +89,8 @@ shop.addProduct(brat);
 shop.addProduct(karnache);
 karnache.addDescription('Карначета – произвеждат се от свинско месо, сланина, подправки и сол, като след смесване се пълнят в тънки животински черва. Предлага се в сурово състояние, подходящи са за печене на скара или във фурна.');
 lionska.addDescription('Лионска наденица – произвежда се от телешко и свинско месо, сланина, вода, червен пипер и твърдо сирене.');
-brat.addDescription('една от най-известните германски наденици, произвежда се по технология като сурово-пушен колбас (в оригиналния си вид е колбас за мазане), само от свинско месо, подправки, вода и готварска сол.');
+brat.addDescription('Братвурстът е една от най-известните германски наденици, произвежда се по технология като сурово-пушен колбас (в оригиналния си вид е колбас за мазане), само от свинско месо, подправки, вода и готварска сол.');
 wurst.addDescription('Вайсвурст – традиционна баварска наденица, с бял цвят, произведена от много фино смляно телешко месо, сланина, магданоз, сол, джинджифил, лук, кардамон и лимон. Приготвят се като се потапят за около 15 минути във гореща (не вряща) вода и се поднасят на масата в купа, заедно с водата в която са приготвени, за да запазят максимално топли. При консумация обвивката от естествено черво се премахва (не се консумира).');
-shop.showAll();
-//shop.showDetails(7);
-
+//shop.showAll();
+shop.showDetails(6);
+shop.showDetails(3);
